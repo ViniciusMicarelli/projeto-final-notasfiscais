@@ -113,7 +113,7 @@ const ReceiptScanner = () => {
   return (
     <>
     <NavBar></NavBar>
-    <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+    <div className="bg-gray-600 min-h-screen flex flex-col items-center justify-center">
       <label
         htmlFor="fileInput"
         className="bg-blue-500 text-white py-2 px-4 rounded cursor-pointer transition hover:bg-blue-700"
