@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import NavBar from '@/components/NavBar';
 
+
 const ReceiptScanner = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [preview, setPreview] = useState('');
