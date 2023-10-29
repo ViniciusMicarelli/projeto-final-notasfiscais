@@ -2,6 +2,13 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import NavBar from '@/components/NavBar';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFileImage, faCamera, faSave, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas);
+
 
 
 const ReceiptScanner = () => {
@@ -111,7 +118,7 @@ const ReceiptScanner = () => {
         htmlFor="fileInput"
         className="bg-blue-500 text-white py-2 px-4 rounded cursor-pointer transition hover:bg-blue-700"
       >
-        Choose a Receipt Image
+        <FontAwesomeIcon icon={faFileImage} /> Choose a Receipt Image
       </label>
       
       <input
@@ -135,7 +142,7 @@ const ReceiptScanner = () => {
         onClick={scanReceipt}
         className="bg-blue-500 text-white py-2 px-4 rounded cursor-pointer transition font-bold mt-4 disabled:bg-gray-400 disabled:cursor-not-allowed hover:bg-blue-700"
       >
-        Scan Receipt
+        <FontAwesomeIcon icon={faCamera} /> Scan Button
       </button>
       <button
         id="saveButton"
@@ -143,11 +150,11 @@ const ReceiptScanner = () => {
         onClick={saveDataAndRedirect}
         className="bg-green-500 text-white py-2 px-4 rounded cursor-pointer transition font-bold mt-4 disabled:bg-gray-400 disabled:cursor-not-allowed hover:bg-green-700"
       >
-        Save Data
+        <FontAwesomeIcon icon={faSave} /> Save Data
       </button>
       <Link href="/savepage">
         <button className="bg-blue-500 text-white py-2 px-4 rounded cursor-pointer transition font-bold mt-4 hover:bg-blue-700">
-          Go to Save Page
+           Go to Save Page <FontAwesomeIcon icon={faArrowRight} />
         </button>
       </Link>
       <div
