@@ -160,7 +160,7 @@ const ReceiptScanner = () => {
       <div
         id="result"
         contentEditable={editing}
-        className="mt-4 text-gray-700"
+        className="mt-4 text-white"
         dangerouslySetInnerHTML={{ __html: result }}
       />
     </div>
